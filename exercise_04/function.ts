@@ -70,3 +70,27 @@ function checkoddeven(num : number){
         return "Odd"
     }
 }
+
+//currying
+function multiplier (factor: number){
+    return function(num: number){
+        return factor * num
+    }
+}
+const mul3 = multiplier(3)
+const mul5 = multiplier(5)
+
+console.log(mul3(4)) // 3*4
+console.log(mul3(5)) // 3*5
+console.log(mul5(4)) // 5*4
+console.log(mul5(5)) // 5*5
+
+//recursive function
+function countdown(fromnumber: number){
+    console.log(fromnumber)
+    let nextnumber: number = fromnumber - 1
+    if(nextnumber>0){
+        countdown(nextnumber)
+    }
+}
+countdown(10)
