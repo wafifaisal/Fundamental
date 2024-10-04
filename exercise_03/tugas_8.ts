@@ -5,3 +5,6 @@ if (int > int2){
 }else{
     console.log(`${int2} -> ${int}`)
 }
+
+// Cara Lain
+//console.log(int > int2 ? `${int} -> ${int2}` : `${int2} -> ${int}` )
