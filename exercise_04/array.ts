@@ -57,7 +57,7 @@ console.log(oddNumber)
 
 console.log(oddNumber.find((item) => item == 3)) //mencari nilai di array
 console.log(oddNumber.findIndex((item) => item == 3)) //mencari nilai di array untuk output index
-console.log(oddNumber.includes(3)) //mencari nilai di array untuk output index
+//console.log(oddNumber.includes(3)) //mencari nilai di array untuk output index
 
 const str: string = "Purwadhika Bandung"
 // console.log(str.split(" ")) // mengubah jadi array

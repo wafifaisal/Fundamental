@@ -94,3 +94,13 @@ function countdown(fromnumber: number){
     }
 }
 countdown(10)
+
+//Arrow Function
+const square = (a: number, b: number) => a*b // function pendek
+console.log(square(4,2))
+
+console.log(parseFloat("10.15")) // mengubah string jadi float
+console.log(isFinite(1/0)) // apakah terhingga?
+console.log(parseInt("1011", 2)) // biner
+console.log(parseInt("100", 10)) // desimal
+console.log(parseInt("123", 8)) // oktal
