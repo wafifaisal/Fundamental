@@ -10,8 +10,12 @@ class Student{
         this.score = nilai
     }
     getAge(){
-        
-        return 0// cari codenya hasil umur
+        const birth : Date = new Date(this.dob)
+        const now : Date = new Date()
+        const diff = now.getTime() - birth.getTime()
+
+
+        return Math.floor(diff/(246060*1000)/365)
     }
 }
 
@@ -20,23 +24,22 @@ const student2 = new Student("Budi","budi@gmail.com","2000-01-01",85)
 const student3 = new Student("Caca","caca@gmail.com","1998-01-01",90)
 
 const arrStudent = [student1,student2,student3]
-console.log(arrStudent)
-//console.log(arrStudent.sort((a,b) => a-b))
-
-// type Nilai = { // type string dan lain lain pake type
-//     Highest: number,
-//     Lowest: number,
-//     Average: number
-// }
-
-// const nilai: Nilai = { // ada property and or ada method isinya
-//     Highest: Student.,
-//     Lowest: student1,
-//     Average: student1,
-//     sort(input: number[]){ // ini function dianggap method
-        
-//     }
-// }
 
 
+function calculate(arr:Student[]){
+    const dataScore = arr.map((item) => item.score).sort((a,b)=>a-b)
+    const dataAge = arr.map((item) => item.getAge()).sort((a,b)=> a-b)
+    return {
+        score:{
+    lowest : dataScore[0],
+    highest: dataScore[dataScore.length-1],
+    average: dataScore.reduce((a,b)=>a+b)/dataScore.length,
+        }, age: {
+            lowest : dataAge[0],
+            highest: dataAge[dataAge.length - 1],
+            average : dataAge.reduce((a,b)=> a+b)/dataAge.length
+        }
+} 
+}
 
+console.log(calculate(arrStudent))

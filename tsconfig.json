@@ -9,6 +9,6 @@
     "strict": true,                                      /* Enable all strict type-checking options. */
     "skipLibCheck": true,                                 /* Skip type checking all .d.ts files. */
     "moduleDetection": "force",
-    "lib" : ["ES2016","DOM"]
+    "lib" : ["ES2017","DOM"]
   }
 }
