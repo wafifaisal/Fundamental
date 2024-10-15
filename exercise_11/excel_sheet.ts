@@ -1,8 +1,8 @@
 function convert(str: string) {
-  const getcolumn = str
+  const column = str
     .split("")
     .reduce((alpha2, alpha1) => alpha2 * 26 + parseInt(alpha1, 36) - 9, 0); // akumulator dimulai dari angka 0
-  return getcolumn;
+  return column;
 }
 
 console.log(convert("AAA"));
