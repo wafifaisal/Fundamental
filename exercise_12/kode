@@ -1,0 +1,8 @@
+  // Membaca nilai analog dari sensor (nilai antara 0 - 4095)
+  sensorValue = analogRead(sensorPin);
+  
+  // Menghitung tegangan mentah berdasarkan persamaan
+  rawVoltage = (sensorValue * 3.3) / 4095.0;
+  
+  // Menghitung tegangan aktual dengan memperhitungkan pembagi tegangan
+  actualVoltage = rawVoltage / dividerRatio;
